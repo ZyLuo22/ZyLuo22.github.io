@@ -424,74 +424,170 @@
 </header>
 
     <main class="content">
+
+  <!-- 💕 封面背景区 -->
+  <section class="album-hero">
+    <div class="album-hero-overlay"></div>
+    <img src="/medias/banner/111.jpg" alt="Album Cover">
+    <div class="album-hero-text">
+      💕 我们的旅行 💕
+    </div>
+  </section>
+
+  <!-- 📸 照片展示区 -->
   <div class="container">
-    <h2 class="love-title">💕 我们的美好瞬间 💕</h2>
-    <div class="love-gallery">
+    <div class="album-grid">
       <div class="love-gallery">
   <div class="photo-item"><img src="/album/travel/images/01.jpg" alt="海边的风"></div>
   <div class="photo-item"><img src="/album/travel/images/02.jpg" alt="阳光与笑容"></div>
   <div class="photo-item"><img src="/album/travel/images/03.jpg" alt="手牵手散步"></div>
+  <div class="photo-item"><img src="/album/travel/images/04.jpg" alt="夏日天空"></div>
 </div>
 
     </div>
   </div>
 </main>
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/css/lightgallery.min.css">
-<script src="https://cdn.jsdelivr.net/npm/lightgallery.js/dist/js/lightgallery.min.js"></script>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    lightGallery(document.querySelector('.love-gallery'), {
-      selector: '.photo-item img',
-      mode: 'lg-fade',
-      download: false
-    });
-  });
-</script>
-
 <style>
-.love-title {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
-  color: #ff8fb1;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  letter-spacing: 1px;
-  text-shadow: 0 2px 8px rgba(255, 192, 203, 0.4);
-}
-
-.love-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
-  padding: 20px;
-}
-
-.love-gallery .photo-item {
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.love-gallery .photo-item img {
+/* ===== 封面区 ===== */
+.album-hero {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  transition: transform 0.5s ease;
+  height: 55vh;
+  overflow: hidden;
+  border-radius: 0 0 35px 35px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.35);
 }
-
-.love-gallery .photo-item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
-}
-
-.love-gallery .photo-item:hover img {
+.album-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7) blur(2px);
   transform: scale(1.05);
+  animation: zoomIn 8s ease-in-out infinite alternate;
+}
+@keyframes zoomIn {
+  from { transform: scale(1.05); filter: brightness(0.7) blur(2px); }
+  to { transform: scale(1.08); filter: brightness(0.85) blur(1px); }
+}
+.album-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom right, rgba(255, 160, 200, 0.3), rgba(180, 120, 255, 0.3));
+  z-index: 1;
+}
+.album-hero-text {
+  position: absolute;
+  bottom: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  font-size: 2.6rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-shadow: 0 0 18px rgba(255, 120, 160, 0.9);
+  animation: fadeInUp 1.5s ease-out;
+  z-index: 2;
+}
+
+/* ===== 图片网格 ===== */
+.album-grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)) !important; /* ✅ 一排最多四张 */
+  gap: 30px !important;
+  padding: 50px 40px !important;
+  justify-items: center !important;
+  max-width: 1500px !important;
+  margin: 0 auto !important;
+}
+
+/* ===== 图片卡片 ===== */
+.photo-item {
+  display: block !important;
+  overflow: hidden !important;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.35) !important;
+  background: #fff !important;
+  transition: all 0.35s ease !important;
+  position: relative !important;
+  width: 100% !important;
+  max-width: 380px !important;
+}
+.photo-item:hover {
+  transform: translateY(-6px) scale(1.02) !important;
+  box-shadow: 0 10px 28px rgba(255, 160, 200, 0.5) !important;
+}
+.photo-item img {
+  width: 100% !important;
+  height: 230px !important;
+  object-fit: cover !important;
+  border-radius: 16px 16px 0 0 !important;
+  display: block !important;
+  transition: transform 0.5s ease !important;
+}
+.photo-item:hover img {
+  transform: scale(1.05) !important;
+}
+
+/* 标题浮现（取自 alt） */
+.photo-item::after {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 105, 180, 0.8);
+  color: #fff;
+  text-align: center;
+  font-size: 1rem;
+  padding: 6px 0;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.4s ease;
+}
+.photo-item:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 覆盖 hexo 默认 img 样式，防止单列 */
+.album-grid img,
+.markdown-body img,
+.post-body img {
+  display: block !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  max-width: 100% !important;
+}
+
+/* 动画 */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translate(-50%, 30px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* 响应式 */
+@media (max-width: 1400px) {
+  .album-grid { grid-template-columns: repeat(3, 1fr) !important; }
+}
+@media (max-width: 1024px) {
+  .album-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .album-grid { grid-template-columns: 1fr !important; }
 }
 </style>
+
+<script>
+/* 自动提取 alt 文字 */
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.photo-item img').forEach(img => {
+    const parent = img.closest('.photo-item');
+    if (img.alt && parent) parent.setAttribute('data-caption', img.alt);
+  });
+});
+</script>
 
 
     <footer class="page-footer bg-color">
