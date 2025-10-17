@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Love story</title>
+  
+  <subtitle>欢迎来到我们爱的小窝</subtitle>
+  <link href="https://www.lzy2xy.love/atom.xml" rel="self"/>
+  
+  <link href="https://www.lzy2xy.love/"/>
+  <updated>2025-10-16T03:45:31.338Z</updated>
+  <id>https://www.lzy2xy.love/</id>
+  
+  <author>
+    <name>Zhiyu Luo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello Baby</title>
+    <link href="https://www.lzy2xy.love/2025/10/15/hello-world/"/>
+    <id>https://www.lzy2xy.love/2025/10/15/hello-world/</id>
+    <published>2025-10-15T15:50:02.124Z</published>
+    <updated>2025-10-16T03:45:31.338Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵"><a href="#扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵" class="headerlink" title="扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵"></a>扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵</h2><h3 id="爱你"><a href="#爱你" class="headerlink" title="爱你"></a>爱你</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵&quot;&gt;&lt;a href=&quot;#扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵&quot; class=&quot;headerlink&quot; title=&quot;扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵&quot;&gt;&lt;/a&gt;扬扬酱，欢迎来到我们爱的小窝，我会</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
