@@ -6,7 +6,7 @@
   <link href="https://www.lzy2xy.love/atom.xml" rel="self"/>
   
   <link href="https://www.lzy2xy.love/"/>
-  <updated>2025-10-16T03:45:31.338Z</updated>
+  <updated>2025-10-23T09:54:26.721Z</updated>
   <id>https://www.lzy2xy.love/</id>
   
   <author>
@@ -17,18 +17,23 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello Baby</title>
+    <title>日志</title>
     <link href="https://www.lzy2xy.love/2025/10/15/hello-world/"/>
     <id>https://www.lzy2xy.love/2025/10/15/hello-world/</id>
     <published>2025-10-15T15:50:02.124Z</published>
-    <updated>2025-10-16T03:45:31.338Z</updated>
+    <updated>2025-10-23T09:54:26.721Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h2 id=&quot;扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵&quot;&gt;&lt;a href=&quot;#扬扬酱，欢迎来到我们爱的小窝，我会不定期更新喵&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;div class=&quot;log-container&quot;&gt;
+  &lt;h2&gt;更新日志&lt;/h2&gt;
+
+  &lt;ul class=&quot;update-list&quot;&gt;
+    &lt;li&gt;&lt;strong&gt;2025/10/17：&lt;/strong&gt; 更新相册功能、添加页面音乐&lt;/li&gt;
+   </summary>
         
       
     
